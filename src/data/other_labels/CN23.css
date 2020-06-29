@@ -1,0 +1,190 @@
+@page {
+    size: A4;
+    margin: 3mm; 
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3mm;
+}
+
+table {
+    width: 100%;
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid black;
+    white-space: nowrap;
+}
+
+tr {
+    height: 5mm;
+    
+}
+
+.grey {
+    background-color: lightgray; 
+}
+
+.from-to {
+    font-weight: bold;
+    font-size: 2.5mm;
+    vertical-align: top;
+}
+
+.adressblock {
+    width: 190mm;
+}
+
+.adressblock td:nth-child(1) {
+    width: 8mm;
+    border-left: 0px solid white !important;
+}
+
+.adressblock td:nth-child(2) {
+    width: 32mm;
+}
+
+.adressblock td:nth-child(3) {
+    width: 32mm;
+}
+
+.adressblock .rechts {
+    width: 80mm!important;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    font-size: 0.8em!important;
+}
+
+.adressblock .legende {
+    vertical-align: top;
+    font-size: .5em;
+}
+
+.item_table {
+    margin-top: -1px;
+    width: 190mm
+}
+
+.item_table td:first-child {
+    width: 8mm;
+    border-left: 0px solid white !important;
+    border-bottom: 0px solid white !important;
+    border-top: 0px solid white !important;
+    background-color: white !important;
+}
+
+
+.item_table tr:first-child {
+    background-color: lightgray;   
+}
+
+.misc {
+    width: 120mm;
+    float: left;
+    height: auto;
+    margin-top: -1px;
+}
+
+.misc td:first-child, .letzte td:first-child {
+    width: 8mm;
+    border: 0px solid white !important;
+    background-color: white !important;
+}
+
+.misc .legende, .post .legende, .letzte .legende, .legende {
+    font-size: 0.8em;
+    margin-right: 0.5em;
+}
+
+.misc tr:first-child, .post tr:first-child {
+    background-color: lightgray; 
+}
+
+.post {
+    margin: -1px 0 0 -1px;
+    width: 70mm;
+    height: 100%
+}
+
+.post .aufgabe {
+    height: 16mm;
+    vertical-align: top;
+}
+
+.letzte {
+    table-layout: fixed; 
+    width: 190mm;
+    margin-top: -1px;
+}
+
+.letzte .legende {
+    margin-bottom: 1mm;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.high {
+    height: 25mm;
+}
+
+#confirm {
+    font-size: 0.70em;
+    width: 71mm;
+    word-break: break-all;
+}
+
+.seite {
+    position: absolute;
+    left: 147mm;
+    top: 50mm;
+    height: 10mm;
+    width: 100mm;
+    z-index: 999;
+    margin: 0;
+    transform: rotate(-90deg);
+    text-align: left;
+}
+
+.seite h4 {
+    font-size: 1.7em;
+    margin: 0 0 -0.5mm 0;
+}
+
+
+.customs_table {
+    margin-top: -1px;
+    width: 190mm
+}
+
+.customs_table td:first-child {
+    width: 8mm;
+    border-left: 0px solid white !important;
+    border-bottom: 0px solid white !important;
+    border-top: 0px solid white !important;
+    background-color: white !important;
+}
+
+.cp71_declaration {
+    width: 120mm;
+    float: left;
+    margin: -1px -1px -1px 0;
+}
+
+.cp71_declaration td:first-child {
+    width: 8mm;
+    border-left: 0px solid white !important;
+    border-bottom: 0px solid white !important;
+    border-top: 0px solid white !important;
+    background-color: white !important;
+}
+
+.spacer-container {
+    height: 35.5mm;
+    display: flex;
+    flex-direction: column;
+}

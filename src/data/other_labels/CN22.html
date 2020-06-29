@@ -1,0 +1,105 @@
+<html>
+<body>
+    <div class="page">
+        <div class="cn_ueberschrift">
+            CUSTOMS DECLARATION CN22
+        </div>
+
+        <p>
+            May be opened officially.
+        </p>
+
+        <p>
+            Designated Operator of Austria - Österreichische Post AG
+        </p>
+
+        <div class="hline"></div>
+
+        <h3>
+            SALE OF GOODS
+        </h3>
+
+        <div class="hline"></div>
+
+        <div class="tablewrap">
+            
+            <div class="tablecell quantity">
+                <p>
+                    <b>Quantity and description of contents</b>
+                </p>
+                
+                {quant_desc}
+    
+            </div>
+    
+            <div class="tablecell netweight">
+                <p>
+                    <b>Net Weight</b>
+                </p>
+                
+                <br>
+                {netweight}
+    
+            </div>
+    
+            <div class="tablecell value">
+                <p>
+                    <b>Value</b>
+                </p>
+                
+                <br>
+                {value}
+    
+            </div>
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="tablewrap">
+            <div class="tablecell hstariff">
+                <p>
+                    <b>HS tariff number and country of origin:</b>
+                </p>
+    
+                {hsnumber_country}
+            </div>
+
+            <div class="tablecell totalweight">
+                <p>
+                    <b>Total weight:</b> 
+                </p>
+
+                {totalweight} kg
+            </div>
+
+            <div class="tablecell totalvalue">
+                <p>
+                    <b>Total value:</b>
+                </p>
+                
+                {totalvalue}
+            </div>
+
+        </div>
+
+        <div class="hline"></div>
+
+        <div class="erklaerung">
+            <p>
+                I, the undersigned, whose name and address are given on the item, 
+                certify that the particulars given in this declaration are correct 
+                and that this item does not contain any dangerous article or articles 
+                prohibited by legislation or by postal or customs regulations.
+            </p>
+            <div class="datumunterschrift">
+                {form_date}
+            </div>
+            <div class="hline" style="margin-bottom: 1mm;"></div>
+            Date and sender's signature
+        </div>
+        
+        
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+@page { 
+    size: 74mm 105mm; 
+    margin: 0mm 0mm 0mm 0mm; 
+}
+
+@font-face {
+    font-family: freefont;
+    src: url(file:///usr/share/fonts/truetype/freefont/FreeSans.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: freefont;
+    src: url("/usr/share/fonts/truetype/freefont/FreeSansBold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: freefont;
+    src: url("/usr/share/fonts/truetype/freefont/FreeSansOblique.ttf");
+    font-style: italic;
+}
+
+body {
+    font-family: Verdana;
+    font-size: 2.35mm;
+    text-align: left;
+    hyphen: auto;
+	margin: 0;
+	height: 105mm;
+	width: 74mm;
+}
+
+.container h1 {
+	margin-top: 2mm;
+	margin-bottom: -1mm;
+}
+
+h2, h3, h4 {
+	margin-bottom: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	height: 105mm;
+	padding: 0 5px;
+	overflow: hidden;
+}
+
+.biozeug {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    flex-wrap: wrap;
+	margin-top: 3px;
+}
+
+.biologo {
+    width: 14mm;
+	height: 9.3mm;
+    margin: 0 1.5mm 0.5mm 0;
+}
+
+
+/*.biotexttext {
+    position: relative;
+    width: auto;
+    text-align: left;
+    top: 50%;
+    tansform: translateY(-50%);
+    }
+
+.biotext {
+    height: 100%
+} */
+
+.barcode {
+    width: 60mm;
+}
+
+h1 {
+    margin: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+}
+
+p {
+	margin:  0 0 2px 0;
+}
+
+.nobr {
+    white-space: nowrap;
+}
+
+.grower {
+	position: fixed;
+	bottom: 0;
+	height: 55mm;
+	margin-bottom: 55mm;
+}

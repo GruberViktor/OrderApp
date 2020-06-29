@@ -1,0 +1,228 @@
+<html><body>
+
+    <table class="adressblock">
+        <!-- Row A -->
+        <tr>
+            <td rowspan="5" class="from-to"><b>From</b></td>
+            <td colspan="4"><div class="legende">Name</div>Viktor Gruber</td>
+            <td rowspan="3" class="legende rechts">No. of parcel</td>
+        </tr>
+        <!-- Row B -->
+        <tr>
+            <td colspan="4"><div class="legende">Business</div>LUVI Fermente KG</td>
+        </tr>
+        <!-- Row C -->
+        <tr>
+            <td colspan="4"><div class="legende">Street</div>Gallabergerstrasse 28</td>
+
+        </tr>
+        <!-- Row D -->
+        <tr>
+            
+            <td><div class="legende">Postcode</div>4860</td>
+            <td colspan="3"><div class="legende">City</div>Lenzing</td>
+            
+            <td rowspan="5"></td>
+        </tr>
+        <!-- Row E -->
+        <tr>
+            
+            <td colspan="3"><div class="legende">Country</div>AUSTRIA</td>
+            <td><div class="legende">Phone</div> 00436801309731 </td>
+            
+        </tr>
+
+
+        <!-- Row A -->
+        <tr>
+            <td rowspan="5" class="from-to"><b>To</b></td>
+            <td colspan="4"><div class="legende">Name</div>{{ name }}</td>
+        </tr>
+        <!-- Row B -->
+        <tr>
+            <td colspan="4"><div class="legende">Business</div>{{ business }}</td>
+        </tr>
+        <!-- Row C -->
+        <tr>
+            <td colspan="4"><div class="legende">Street</div>{{ street }}</td>
+
+        </tr>
+        <!-- Row D -->
+        <tr>
+            
+            <td><div class="legende">Postcode</div>{{ postcode }}</td>
+            <td colspan="3"><div class="legende">City</div>{{ city }}</td>
+            
+            <td rowspan="1"><div class="legende">Importer's reference (VAT-Number)</div>{{ vat_number }} </td>
+        </tr>
+        <!-- Row E -->
+        <tr>
+            
+            <td colspan="3"><div class="legende">Country</div>{{ country }}</td>
+            <td><div class="legende">Phone</div></td>
+            <td><div class="legende">Importer's Email</div>{{ email }}</td>
+            
+        </tr>
+    </table>
+
+    {% if type_ == "Receipt" or type_ == "CN23" %}
+    <!-- CN23 and Receipt -->
+    <table class="item_table">
+        <tr>
+            <td></td>
+            <td>Description</td>
+            <td>Quantity</td>
+            <td>Net weight (kg)</td>
+            <td>Value</td>
+            <td>HS tariff Number</td>
+            <td>Country of origin</td>
+        </tr>
+
+            {{ items }}
+
+    </table>
+    
+    <table class="misc">
+        <tr>
+            <td></td>
+            <td><span class="legende">Paket Light International Economy</span></td>
+            <td><span class="legende">Total gross weight</span></td>
+            <td><span class="legende">Total value</span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><span class="legende">Category of items: <b>Sale of goods</b></span></td>
+            <td></td>
+            <td>{{ total_value }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3">
+                <div style="height:20.3mm;">Comments:</div></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3">Invoice: 1 attached</td>
+        </tr>
+    </table>
+    <!-- End CN 23 and Receipt-->
+
+    {% else %}
+    <!-- CP 71-->
+    <table class="customs_table">
+        <tr>
+            <td></td>
+            <td class="top high">
+                <div style="height: 25mm;">
+                    <span class="legende">
+                        Office of Exchange
+                    </span>
+                </div>
+
+            </td>
+            <td class="top">
+                <span class="legende">
+                    Customs Stamp
+                </span>
+
+            </td>
+            <td rowspan="2" class="top">
+                <span class="legende">
+                    Please affix official labels here, if required
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="grey">
+                <span class="legende">
+                    Paket Light International Economy
+                </span>
+            </td>
+            <td>Customs Duty:</td>
+        </tr>
+            
+    </table>
+
+    <table class="cp71_declaration">
+        <tr>
+            <td></td>
+            <td>
+                <div class="spacer-container">
+                    <div class="legende">
+                        Declaration by addressee: 
+                        I have received the parcel described on this note
+                    </div>
+                    <div style="flex-grow: 1;"></div>
+                    <div>
+                        <span style="margin-right: 2cm">
+                            Date:    
+                        </span>
+                        <span>
+                            Addressees signature:
+                        </span>
+                    </div>
+
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- End CP 71-->
+    {% endif %}
+
+    <table class="post">
+        <tr>
+            <td colspan="2"><center>Postal Charges/Fees</center></td>
+        </tr>
+        <tr>
+            <td class="top"><span class="legende">Charges<p></p></span></td>
+            <td class="grey top"><span class="legende">Total Gross weight of package</span></td>
+        </tr>
+        <tr>
+            <td class="top"><span class="legende">Number of invoices</span></td>
+            <td class="grey"><span class="legende">Insured value SDR</span></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="aufgabe"><span class="legende">Office of origin/Date of posting</span></td>
+        </tr>
+    </table>
+
+
+
+    <table class="letzte">
+        <tr>
+            <td></td>
+            <td id="confirm" class="grey top">
+                    <p style="margin-top: 0;"> I confirm that the particulars given in this customs declaration<br>
+                        are correct and that this itme does not contain any dangerous <br>
+                        article prohibited by legislation or by postal or customs regulations. 
+                    </p>
+                    {{ date }}
+                
+            </td>
+            <td class="top"><div class="legende">Date and sender's signature</div><div>{{ date }}</div></td>
+            <td class="top">
+                <div id="return">
+                    {% if type_ == "CP71" or type_ == "Receipt" %}
+                    <div style="font-size: 0.75em;">
+                        Sender's instructions in case of non-delivery
+                    </div>
+                    <div style="margin-top: 1mm;">
+                        Return to sender
+                    </div> 
+                    {% endif %}
+                </div>
+            </td>
+        </tr>
+    </table>
+
+
+    <div class="seite">
+        
+        <h4>{{ type_ }}</h4>
+        <span class="small">The parcel may be opened officially</span>
+        
+    </div>
+    <hline></hline>
+    
+</body></html>

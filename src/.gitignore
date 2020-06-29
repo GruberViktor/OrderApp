@@ -1,0 +1,13 @@
+
+_*
+sessioninfo.json
+credentials.json
+temp/*
+__pycache__
+data/orders.json
+includes/googlecred.json
+barcodes
+data/products/labels/*
+data/products/barcodes/*
+data/products/*.*
+!data/products/label.css
