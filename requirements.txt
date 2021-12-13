@@ -20,7 +20,7 @@ html5lib==1.1
 idna==2.10
 isodate==0.6.0
 Jinja2==2.11.2
-lxml==4.5.1
+lxml==4.6.5
 MarkupSafe==1.1.1
 ordereddict==1.1
 Pillow==7.1.2
